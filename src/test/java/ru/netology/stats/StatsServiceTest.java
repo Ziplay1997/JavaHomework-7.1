@@ -11,14 +11,14 @@ public class StatsServiceTest {
     };
 
     // Получаем среднее значение продаж для тестов
-    AverageSumSalesService service1 = new AverageSumSalesService();
+    StatsService service1 = new StatsService();
     int averageSum = service1.averageSumSales(arr);
 
 
     // Тест на проверку количества продаж за год
     @Test
     public void sumSalesServiceTest() {
-        SumSalesService service = new SumSalesService();
+        StatsService service = new StatsService();
 
         int expected = 710;
         int actual = service.sumAllSales(arr);
@@ -29,7 +29,7 @@ public class StatsServiceTest {
     // Тест на проверку средней суммы продаж
     @Test
     public void averageSumSalesServiceTest() {
-        AverageSumSalesService service = new AverageSumSalesService();
+        StatsService service = new StatsService();
 
         int expected = 59;
         int actual = service.averageSumSales(arr);
@@ -40,7 +40,7 @@ public class StatsServiceTest {
     // Тест на проверку нахождения месяца с пиком продаж
     @Test
     public void maxSalesServiceTest() {
-        MaxSalesService service = new MaxSalesService();
+        StatsService service = new StatsService();
 
         int expected = 3;
         int actual = service.maxSalesInMounth(arr);
@@ -51,7 +51,7 @@ public class StatsServiceTest {
     // Тест на проверку нахождения месяца с минимумом продаж
     @Test
     public void minSalesServiceTest() {
-        MinSalesService service = new MinSalesService();
+        StatsService service = new StatsService();
 
         int expected = 12;
         int actual = service.minSalesInMounth(arr);
@@ -62,7 +62,7 @@ public class StatsServiceTest {
     // Тест на проверку нахождения количества месяцев в которых продажи были ниже среднего
     @Test
     public void mounthLowerAverageServiceTest() {
-        MountLowerAverageService service = new MountLowerAverageService();
+        StatsService service = new StatsService();
 
         int expected = 7;
         int actual = service.mounthLowerAverage(arr, averageSum);
@@ -72,7 +72,7 @@ public class StatsServiceTest {
 
     @Test
     public void mounthMoreAverageServiceTest() {
-        MounthMoreAverageService service = new MounthMoreAverageService();
+        StatsService service = new StatsService();
 
         int expected = 5;
         int actual = service.mounthMoreAverage(arr, averageSum);
