@@ -7,12 +7,8 @@ public class StatsServiceTest {
 
     // Массив для тестирования
     int[] arr = {
-            42, 89, 100, 45, 28, 21, 99, 96, 57, 32, 89, 12
+            8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18
     };
-
-    // Получаем среднее значение продаж для тестов
-    StatsService service1 = new StatsService();
-    int averageSum = service1.averageSumSales(arr);
 
 
     // Тест на проверку количества продаж за год
@@ -20,7 +16,7 @@ public class StatsServiceTest {
     public void sumSalesServiceTest() {
         StatsService service = new StatsService();
 
-        int expected = 710;
+        int expected = 180;
         int actual = service.sumAllSales(arr);
 
         Assertions.assertEquals(expected, actual);
@@ -31,7 +27,7 @@ public class StatsServiceTest {
     public void averageSumSalesServiceTest() {
         StatsService service = new StatsService();
 
-        int expected = 59;
+        int expected = 15;
         int actual = service.averageSumSales(arr);
 
         Assertions.assertEquals(expected, actual);
@@ -42,7 +38,7 @@ public class StatsServiceTest {
     public void maxSalesServiceTest() {
         StatsService service = new StatsService();
 
-        int expected = 3;
+        int expected = 8;
         int actual = service.maxSalesInMounth(arr);
 
         Assertions.assertEquals(expected, actual);
@@ -53,7 +49,7 @@ public class StatsServiceTest {
     public void minSalesServiceTest() {
         StatsService service = new StatsService();
 
-        int expected = 12;
+        int expected = 9;
         int actual = service.minSalesInMounth(arr);
 
         Assertions.assertEquals(expected, actual);
@@ -64,8 +60,8 @@ public class StatsServiceTest {
     public void mounthLowerAverageServiceTest() {
         StatsService service = new StatsService();
 
-        int expected = 7;
-        int actual = service.mounthLowerAverage(arr, averageSum);
+        int expected = 5;
+        int actual = service.mounthLowerAverage(arr);
 
         Assertions.assertEquals(expected, actual);
     }
@@ -75,7 +71,7 @@ public class StatsServiceTest {
         StatsService service = new StatsService();
 
         int expected = 5;
-        int actual = service.mounthMoreAverage(arr, averageSum);
+        int actual = service.mounthMoreAverage(arr);
 
         Assertions.assertEquals(expected, actual);
     }

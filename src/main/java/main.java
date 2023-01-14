@@ -3,7 +3,7 @@ import ru.netology.stats.*;
 public class main {
     public static void main(String[] args) {
         int[] arr = {
-                42, 89, 100, 150, 28, 100, 99, 96, 50, 28, 89, 150
+                8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18
         };
 
         // СУММА ВСЕХ ПРОДАЖ
@@ -28,13 +28,16 @@ public class main {
 
         // МЕСЯЦ, КОГДА БЫЛО МИНИМАЛЬНОЕ КОЛИЧЕСТВО ПРОДАж
         StatsService service4 = new StatsService();
-        int actiual4 = service4.mounthLowerAverage(arr, actiual1);
+        int actiual4 = service4.mounthLowerAverage(arr);
         System.out.println("Количество месяцев с продажами ниже среднего: " + actiual4);
 
         // МЕСЯЦ, КОГДА БЫЛО МИНИМАЛЬНОЕ КОЛИЧЕСТВО ПРОДАж
         StatsService service5 = new StatsService();
-        int actiual5 = service5.mounthMoreAverage(arr, actiual1);
+        int actiual5 = service5.mounthMoreAverage(arr);
         System.out.println("Количество месяцев с продажами выше среднего: " + actiual5);
 
+
     }
+
 }
+

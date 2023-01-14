@@ -16,7 +16,8 @@ public class StatsService {
         for (int j : averageSum) {
             sumSales = sumSales + j;
         }
-        return sumSales / averageSum.length;
+        int average = sumSales / averageSum.length;
+        return average;
     }
 
     public int maxSalesInMounth(int[] maxSales) {
@@ -39,20 +40,22 @@ public class StatsService {
         return min + 1;
     }
 
-    public int mounthLowerAverage(int[] array, int average) {
+    public int mounthLowerAverage(int[] array) {
+        int newAverage = averageSumSales(array);
         int lowerAverage = 0;
         for (int j : array) {
-            if (j < average) {
+            if (j < newAverage) {
                 lowerAverage = lowerAverage + 1;
             }
         }
         return lowerAverage;
     }
 
-    public int mounthMoreAverage(int[] array, int average) {
+    public int mounthMoreAverage(int[] array) {
+        int newAverage = averageSumSales(array);
         int moreAverage = 0;
         for (int j : array) {
-            if (j > average) {
+            if (j > newAverage) {
                 moreAverage = moreAverage + 1;
             }
         }
